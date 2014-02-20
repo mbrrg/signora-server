@@ -1,0 +1,67 @@
+[
+{
+  "pk": 1,
+  "model": "signora.content",
+  "fields": {
+    "system_content": "True",
+    "title": "Power save mode",
+    "type": "0"
+  }
+},
+{
+  "pk": 1, 
+  "model": "signora.weekday", 
+  "fields": {
+    "name": "Monday", 
+    "iso_weekday": "1"
+  }
+},
+{
+  "pk": 2, 
+  "model": "signora.weekday", 
+  "fields": {
+    "name": "Tuesday", 
+    "iso_weekday": "2"
+  }
+},
+{
+  "pk": 3, 
+  "model": "signora.weekday", 
+  "fields": {
+    "name": "Wednesday", 
+    "iso_weekday": "3"
+  }
+},
+{
+  "pk": 4, 
+  "model": "signora.weekday", 
+  "fields": {
+    "name": "Thursday", 
+    "iso_weekday": "4"
+  }
+},
+{
+  "pk": 5, 
+  "model": "signora.weekday", 
+  "fields": {
+    "name": "Friday", 
+    "iso_weekday": "5"
+  }
+},
+{
+  "pk": 6, 
+  "model": "signora.weekday", 
+  "fields": {
+    "name": "Saturday", 
+    "iso_weekday": "6"
+  }
+},
+{
+  "pk": 7, 
+  "model": "signora.weekday", 
+  "fields": {
+    "name": "Sunday", 
+    "iso_weekday": "7"
+  }
+}
+]

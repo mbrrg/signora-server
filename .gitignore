@@ -1,0 +1,7 @@
+.vagrant
+.idea
+__pycache__/
+*.py[cod]
+*.log
+*.sqlite3
+settings_secret.py
