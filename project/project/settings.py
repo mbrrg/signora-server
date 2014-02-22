@@ -55,7 +55,6 @@ existing = root.manager.loggerDict.keys()
 for logger in existing:
     LOGGING['loggers'][logger] = {}
 
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -65,7 +64,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ws4redis',
     'signora',
 )
 
@@ -111,8 +109,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
-WEBSOCKET_URL = '/ws/'
-
-WSGI_APPLICATION = 'ws4redis.django_runserver.application'
-#WSGI_APPLICATION = 'project.wsgi.application'
+WSGI_APPLICATION = 'project.wsgi.application'

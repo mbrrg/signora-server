@@ -1,8 +1,7 @@
 from django.contrib import admin
 from signora.models import Device, Schedule, Content, Weekday
-import redis
-from ws4redis import settings as redis_settings
-
+from django.conf import settings
+from pusher import *
 
 class ScheduleInline(admin.TabularInline):
     model = Schedule
@@ -11,10 +10,11 @@ class ScheduleInline(admin.TabularInline):
 
 
 def send_command(queryset, command):
-    conn = redis.StrictRedis()
-  
+    pusher = Pusher(app_id=settings.PUSHER_APP_ID, key=settings.PUSHER_APP_KEY, secret=settings.PUSHER_APP_SECRET)
+
     for device in queryset:
-        conn.publish('_broadcast_:{0}'.format(device.identifier), command)
+        channel = pusher["signora-{0}".format(device.identifier)]
+        channel.trigger(command, dict())
 
 
 def restart_device(modeladmin, request, queryset):

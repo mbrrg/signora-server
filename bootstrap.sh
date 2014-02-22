@@ -8,8 +8,5 @@ apt-get upgrade
 apt-get install python3 python3-pip redis-server
 
 pip-3.2 install django django-ipware
-# pip-3.2 install django-websocket-redis
-pip-3.2 install https://github.com/mbrrg/django-websocket-redis/zipball/python3-support
+pip-3.2 install https://github.com/mbrrg/pusher_client_python/zipball/master
 
-
-#apt-get install build-essential python-dev
